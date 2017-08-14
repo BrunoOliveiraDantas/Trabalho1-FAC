@@ -11,8 +11,8 @@ void ler_pontos(double *pontos){
 }
 
 void mostrar_pontos(double raio, double *centro){
-    printf("Raio: %.3lf\n", raio);
-    printf("Centro: (%.3lf, %.3lf)\n", centro[0], centro[1]);
+    printf("Raio: %.3f\n", raio);
+    printf("Centro: (%.3f, %.3f)\n", centro[0], centro[1]);
 }
 
 void circ_n_viavel(){

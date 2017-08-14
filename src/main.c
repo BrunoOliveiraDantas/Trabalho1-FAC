@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "io.h"
+#include "operations.h"
+#include "plan_cart.h"
 
 int main(){
-    double pontos[5];
 
     ler_pontos(pontos);
-    mostrar_pontos(raio, centro);
+
+    if(verificar_pol(pontos) == 1)
+        mostrar_pontos(raio, centro);
+    else
+        circ_n_viavel();
 
     return 0;
 }
