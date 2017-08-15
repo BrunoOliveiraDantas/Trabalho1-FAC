@@ -8,7 +8,7 @@ int main(){
 
     ler_pontos(pontos);
 
-    if(verificar_pol(pontos) == 1)
+    if(verificar_poli(pontos) == 1)
         mostrar_pontos(raio, centro);
     else
         circ_n_viavel();
