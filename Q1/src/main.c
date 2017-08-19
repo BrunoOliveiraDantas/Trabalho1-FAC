@@ -10,6 +10,7 @@ int main(){
 
     if(calc_det() != 0)
         mostrar_pontos(raio, centro);
+
     else
         circ_n_viavel();
 

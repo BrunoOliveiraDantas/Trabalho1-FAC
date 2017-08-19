@@ -22,6 +22,27 @@ void calc_raio(){
 }
 
 void calc_centro(){
+
+	double k1, k2, cx, cy;
+	double a = 2*(pontos[2] - pontos[0]);
+	double b = 2*(pontos[3] - pontos[1]);
+	double c = 2*(pontos[4] - pontos[0]);
+	double d = 2*(pontos[5] - pontos[1]);
+
+	double det = (a*d) - (b*c);
+
+	if (det == 0)
+		calc_centro();
+
+	k1 = ((pontos[2] * pontos[2]) + (pontos[3] * pontos[3]) - (pontos[0] * pontos[0]) + (pontos[1] * pontos[1])); 
+	k2 = ((pontos[4] * pontos[4]) + (pontos[5] * pontos[5]) - (pontos[0] * pontos[0]) + (pontos[1] * pontos[1]));
+
+	cx = ((k1 * d) - (k2*b)) / det;
+	cy = ((a * k2) - (c*k1)) / det;
+
+	centro[0] = cx;
+	centro[1] = cy;
+
 }
 
 int verificar_poli(){
